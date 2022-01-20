@@ -13,6 +13,7 @@ python setup.py install
 - python 3.7
 - numpy >= 1.21.0
 - Scipy >= 1.7.0
+- scikit_learn >= 1.0.2
 # Quick start
 One example can start in this [notebook](https://github.com/pengchen1019/MLPCA/blob/main/tests/test_mlpca.ipynb).
 # License
