@@ -3,7 +3,7 @@ A package for data-denoising via uncertainty aware Principal ComponentsAnalysis
 # Install
 The package can be installed via the PyPI and pip:
 ```
-pip install cosmoabc
+pip install mlpca
 ```
 If you download the repository, you can also install in the mlpca directory:
 ```
