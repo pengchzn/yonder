@@ -48,7 +48,12 @@ Requirements
 -  python 3.7
 -  numpy >= 1.21.0
 -  Scipy >= 1.7.0
--  scikit_learn >= 1.0.2 # License The MIT License
+-  scikit_learn >= 1.0.2 
+
+License 
+============
+
+The MIT License
 
 References
 ==========
