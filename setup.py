@@ -4,9 +4,9 @@ with open('README.md', 'r') as fp:
     long_description = fp.read()
 
 setuptools.setup(
-    name='fancyname',
-    version='x.x',
-    description='A package for data-denoising via uncertainty aware Principal ComponentsAnalysis',
+    name='popcorn',
+    version='0.1',
+    description='A PythOn PaCkage for nOisy data ReductioN',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='',

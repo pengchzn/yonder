@@ -3,13 +3,13 @@ from numpy.linalg import inv
 import scipy.sparse.linalg as sp
 
 
-def MLPCA(X, Xsd, MaxIter=1e5):
+def popcorn(X, Xsd, MaxIter=1e5):
     epsilon = 1e-10
     MaxIter = MaxIter
     n = X.shape[1]
     p = n - 1
     VarX = np.multiply(Xsd, Xsd)
-    U, S, V = sp.svds(X,k=p)
+    U, S, V = sp.svds(X, k=p)
     i = 0
     Sold = 0
     k = -1
