@@ -1,6 +1,6 @@
 import numpy as np
-from numpy.linalg import inv
 import scipy.sparse.linalg as sp
+from numpy.linalg import inv
 
 
 def popcorn(X, Xsd, MaxIter=1e5):
@@ -32,13 +32,13 @@ def popcorn(X, Xsd, MaxIter=1e5):
                 exit("MaxIter exceeded")
         if k < 0:
             Sold = Sobj
-            U, S, V = sp.svds(LX,k=p)
+            U, S, V = sp.svds(LX, k=p)
             V = V.T
             X = X.T
             VarX = VarX.T
             n = X.shape[1]
             U = V
-    U, S, V = sp.svds(LX,k=p)
+    U, S, V = sp.svds(LX, k=p)
     S = np.mat(np.diag(S))
     V = V.T
     return U @ S @ V.T
