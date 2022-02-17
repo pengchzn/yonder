@@ -1,63 +1,50 @@
-XX
-==
+# POPCORN
+A **P**yth**O**n **P**a**C**kage for n**O**isy data **R**eductio**N**
 
-XX: A package for data-denoising via uncertainty aware singular value decomposition\[the link of the paper\]
+` POPCORN` is a program that uses singular value decomposition to do low-rank data denoising and reconstruction. ` POPCORN` takes a tabular data matrix and an error matrix as input and returns a denoised version of the original dataset as output. In most test instances, the approach is more accurate and efficient when used on a wide range of tests with varying amounts of contamination. As a result, it may simply be applied to astronomical research, assisting in the data cleaning process.
 
-- Outperforming the robust Gaussian process with Student-𝑡likelihood significantly in many test cases
-- Easy to implement and computationally tractable
+You can get the docs on POPCORN here![give the link of the docs]
 
-`XX` is a package which can do the data-denoising via uncertainty, using the singular value decomposition(SVD). It
-iteratively does the SVD with the errors-in-measurements, thus denoising the data, and can avoid the bias during the
-data processing. Applied to a wide range of experiments with different contamination levels, the method is more accurate
-and efficient in most test cases. So it also can be easily applied to astrophysical study, helping clean the data.
-
-Install
-=======
+# Install
 
 The package can be installed via the PyPI and pip:
 
-    pip install XX
+    pip install popcorn
 
-If you download the repository, you can also install it in the XX directory:
+If you download the repository, you can also install it in the popcorn directory:
 
     python setup.py install
 
-Usage
-=====
+# Usage
 
-    from XX import XX
+    import popcorn
 
     # get the denoised data
-    data = MLPCA(X,Xsd)
+    data = popcorn(X,Xsd)
 
-Example
-=======
 
-\[take a simple example, easy contamination, add the noise manually and denoise it with the package\]
+# Example
 
-\[Put the Code, the plot here\]
+[take a simple example, easy contamination, add the noise manually and denoise it with the package]
 
-You can test it in this
-[notebook](https://github.com/pengchen1019/MLPCA/blob/main/tests/test_mlpca.ipynb)
-by yourself!
+[Put the Code, the plot here]
 
-Benchmark
-=========
+You can test it in this [notebook](https://github.com/pengchen1019/popcorn/blob/main/tests/test_popcorn.ipynb) by yourself!
 
-\[Compared with the Standard PCA or other algorithms\]
+# Benchmark
 
-Requirements
-============
+[Compared with the Standard PCA or other algorithms]
 
-- python 3.7
-- numpy \>= 1.21.0
-- Scipy \>= 1.7.0
-- scikit\_learn \>= 1.0.2
 
-License
-=======
+# Requirements
 
-The MIT License
+- python 3
+- numpy >= 1.21.0
+- Scipy >= 1.7.0
+- scikit_learn >= 1.0.2
 
-References
-==========
+# License
+
+The GPL License
+
+# References
