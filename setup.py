@@ -9,14 +9,14 @@ setuptools.setup(
     description='A PythOn PaCkage for nOisy data ReductioN',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='',
+    url='https://github.com/pengchen1019/popcorn',
     keywords=['data-denoising', 'Principal ComponentsAnalysis'],
-    author='',
-    author_email='',
+    author='Rafael S. de Souza, Peng Chen',
+    author_email=', pengchzn@gmail.com',
     packages=setuptools.find_packages(),
     classifiers=[
         'Topic :: Scientific/Engineering',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: GPL License',
         'Programming Language :: Python :: 3',
     ],
 )
