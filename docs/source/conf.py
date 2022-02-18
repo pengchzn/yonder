@@ -17,13 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'XDSVD'
-copyright = '2022, Peng Chen'
-author = 'Peng Chen'
+project = 'POPCORN'
+copyright = '2022, Rafael S. de Souza & Peng Chen'
+author = 'Rafael S. de Souza & Peng Chen'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
-
 
 # -- General configuration ---------------------------------------------------
 
