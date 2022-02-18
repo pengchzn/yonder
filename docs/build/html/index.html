@@ -1,183 +1,155 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html>
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>POPCORN &mdash; POPCORN 0.1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-    <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <title>POPCORN &#8212; POPCORN 0.1 documentation</title>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/alabaster.css" rel="stylesheet" type="text/css"/>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA="
+            src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html"/>
+    <link href="search.html" rel="search" title="Search"/>
+    <link href="README.html" rel="next" title="POPCORN"/>
+
+    <link href="_static/custom.css" rel="stylesheet" type="text/css"/>
+
+
+    <meta content="width=device-width, initial-scale=0.9, maximum-scale=0.9" name="viewport"/>
+
 </head>
+<body>
+<div class="document">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a class="icon icon-home" href="#"> POPCORN
-            </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-                  <li><a class="reference internal" href="#">POPCORN</a>
-                      <ul>
-                          <li><a class="reference internal" href="#how-to-install-popcorn">How to install POPCORN</a>
-                          </li>
-                          <li><a class="reference internal" href="#how-to-use-popcorn">How to use POPCORN</a></li>
-                          <li><a class="reference internal" href="#example">Example</a></li>
-                          <li><a class="reference internal" href="#requirements">Requirements</a></li>
-                          <li><a class="reference internal" href="#license">License</a></li>
-                          <li><a class="reference internal" href="#references">References</a></li>
-                      </ul>
-                  </li>
-</ul>
-</div>
+    <div aria-label="main navigation" class="sphinxsidebar" role="navigation">
+        <div class="sphinxsidebarwrapper">
+            <h1 class="logo"><a href="#">POPCORN</a></h1>
+
+
+            <p class="blurb">A python package for noisy data reduction</p>
+
+
+            <p>
+                <iframe allowtransparency="true"
+                        frameborder="0" height="35px" scrolling="0"
+                        src="https://ghbtns.com/github-btn.html?user=pengchen1019&repo=popcorn&type=watch&count=true&size=large&v=2"
+                        width="200px"></iframe>
+            </p>
+
+
+            <p>
+                <a class="badge" href="https://travis-ci.org/pengchen1019/popcorn">
+                    <img
+                            alt="https://secure.travis-ci.org/pengchen1019/popcorn.svg?branch=master"
+                            src="https://secure.travis-ci.org/pengchen1019/popcorn.svg?branch=master"
+                    />
+                </a>
+            </p>
+
+
+            <h3>Navigation</h3>
+            <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+            <ul>
+                <li class="toctree-l1"><a class="reference internal" href="README.html">POPCORN</a></li>
+                <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+            </ul>
+
+            <div class="relations">
+                <h3>Related Topics</h3>
+                <ul>
+                    <li><a href="#">Documentation overview</a>
+                        <ul>
+                            <li>Next: <a href="README.html" title="next chapter">POPCORN</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="searchbox" role="search" style="display: none">
+                <h3 id="searchlabel">Quick search</h3>
+                <div class="searchformwrapper">
+                    <form action="search.html" class="search" method="get">
+                        <input aria-labelledby="searchlabel" autocapitalize="off" autocomplete="off" autocorrect="off"
+                               name="q" spellcheck="false" type="text"/>
+                        <input type="submit" value="Go"/>
+                    </form>
+                </div>
+            </div>
+            <script>$('#searchbox').show(0);</script>
         </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">POPCORN</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>POPCORN</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-              <div itemprop="articleBody">
-
-                  <section id="popcorn">
-                      <h1>POPCORN<a class="headerlink" href="#popcorn" title="Permalink to this headline">¶</a></h1>
-                      <p><em>A PythOn PaCkage for nOisy data ReductioN</em></p>
-                      <p><cite>POPCORN</cite> is a program that uses singular value decomposition to do
-                          low-rank data denoising and reconstruction. <cite>POPCORN</cite> takes a tabular
-                          data matrix and an error matrix as input and returns a denoised version
-                          of the original dataset as output. In most test instances, the approach
-                          is more accurate and efficient when used on a wide range of tests with
-                          varying amounts of contamination. As a result, it may simply be applied
-                          to astronomical research, assisting in the data cleaning process.</p>
-                      <p>Get the docs of POPCORN here! [give the link of the docs]</p>
-                      <section id="how-to-install-popcorn">
-                          <h2>How to install POPCORN<a class="headerlink" href="#how-to-install-popcorn"
-                                                       title="Permalink to this headline">¶</a></h2>
-                          <p>The <cite>POPCORN</cite> can be installed via the PyPI and pip:</p>
-                          <div class="highlight-default notranslate">
-                              <div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span
-                                      class="n">popcorn</span>
-</pre>
-                              </div>
-                          </div>
-                          <p>If you download the repository, you can also install it in the popcorn
-                              directory:</p>
-                          <div class="highlight-default notranslate">
-                              <div class="highlight"><pre><span></span><span class="n">git</span> <span
-                                      class="n">clone</span> <span class="n">https</span><span class="p">:</span><span
-                                      class="o">//</span><span class="n">github</span><span class="o">.</span><span
-                                      class="n">com</span><span class="o">/</span><span
-                                      class="n">pengchen1019</span><span class="o">/</span><span
-                                      class="n">popcorn</span>
-<span class="n">cd</span> <span class="n">popcorn</span>
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span
-                                          class="n">install</span>
-</pre>
-                              </div>
-                          </div>
-                      </section>
-                      <section id="how-to-use-popcorn">
-                          <h2>How to use POPCORN<a class="headerlink" href="#how-to-use-popcorn"
-                                                   title="Permalink to this headline">¶</a></h2>
-                          <div class="highlight-default notranslate">
-                              <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">popcorn</span>
-
-<span class="c1"># get the denoised data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">popcorn</span><span class="p">(</span><span
-                                          class="n">X</span><span class="p">,</span><span class="n">Xsd</span><span
-                                          class="p">)</span>
-</pre>
-                              </div>
-                          </div>
-                      </section>
-                      <section id="example">
-                          <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-                          <p>[take a simple example, easy contamination, add the noise manually and
-                              denoise it with the package]</p>
-                          <p>[Put the Code, the plot here]</p>
-                          <p>You can test it in this <a class="reference external"
-                                                        href="https://github.com/pengchen1019/popcorn/blob/main/tests/test_popcorn.ipynb">notebook</a>
-                              by yourself!</p>
-                      </section>
-<section id="requirements">
-    <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-    <li><p>python 3</p></li>
-<li><p>numpy &gt;= 1.21.0</p></li>
-<li><p>Scipy &gt;= 1.7.0</p></li>
-</ul>
-</section>
-                      <section id="license">
-                          <h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-                          <p>The GPL License</p>
-                      </section>
-                      <section id="references">
-                          <h2>References<a class="headerlink" href="#references"
-                                           title="Permalink to this headline">¶</a></h2>
-                      </section>
-</section>
+    </div>
+    <div class="documentwrapper">
+        <div class="bodywrapper">
 
 
-           </div>
-          </div>
-          <footer>
+            <div class="body" role="main">
 
-  <hr/>
+                <section id="popcorn">
+                    <h1><cite>POPCORN</cite><a class="headerlink" href="#popcorn"
+                                               title="Permalink to this headline">¶</a></h1>
+                    <div class="toctree-wrapper compound">
+                        <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+                        <ul>
+                            <li class="toctree-l1"><a class="reference internal" href="README.html">POPCORN</a>
+                                <ul>
+                                    <li class="toctree-l2"><a class="reference internal"
+                                                              href="README.html#how-to-install-popcorn">How to install
+                                        <code class="docutils literal notranslate"><span
+                                                class="pre">POPCORN</span></code></a></li>
+                                    <li class="toctree-l2"><a class="reference internal"
+                                                              href="README.html#how-to-use-popcorn">How to use <code
+                                            class="docutils literal notranslate"><span class="pre">POPCORN</span></code></a>
+                                    </li>
+                                    <li class="toctree-l2"><a class="reference internal"
+                                                              href="README.html#requirements">Requirements</a></li>
+                                    <li class="toctree-l2"><a class="reference internal" href="README.html#license">License</a>
+                                    </li>
+                                    <li class="toctree-l2"><a class="reference internal" href="README.html#references">References</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="indices-and-tables">
+                    <h1>Indices and tables<a class="headerlink" href="#indices-and-tables"
+                                             title="Permalink to this headline">¶</a></h1>
+                    <ul class="simple">
+                        <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a>
+                        </p></li>
+                        <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a>
+                        </p></li>
+                        <li><p><a class="reference internal" href="search.html"><span
+                                class="std std-ref">Search Page</span></a></p></li>
+                    </ul>
+                </section>
 
-  <div role="contentinfo">
-      <p>&#169; Copyright 2022, Rafael S. de Souza &amp; Peng Chen.</p>
-  </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+            </div>
 
-</footer>
         </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </div>
+    <div class="clearer"></div>
+</div>
+<div class="footer">
+    &copy;2022, Rafael S. de Souza & Peng Chen.
+
+    |
+    Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+    &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+
+    |
+    <a href="_sources/index.rst.txt"
+       rel="nofollow">Page source</a>
+</div>
+
 
 </body>
 </html>

@@ -32,7 +32,7 @@ If you download the repository, you can also install it in the ``popcorn`` direc
    python setup.py install
 
 How to use ``POPCORN``
-==================
+======================
 
 ::
 
@@ -79,4 +79,3 @@ References
 - Wentzell, P. D., & Hou, S. 2012, Journal of Chemometrics,26, 264, doi: https://doi.org/10.1002/cem.2428
 
 - Wentzell, P. D., & Lohnes, M. T. 1999, Chemometrics andIntelligent Laboratory Systems, 45, 65,doi: http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2
-
