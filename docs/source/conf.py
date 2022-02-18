@@ -54,23 +54,11 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-import pandoc
-
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',
-        'searchbox.html',
-    ]
-}
 
 html_theme_options = {
-    'github_button': 'True',
     'github_user': 'pengchen1019',
     'github_repo': 'popcorn',
     'description': 'A python package for noisy data reduction',
     'fixed_sidebar': 'True',
-    'sidebar_includehidden': 'False',
-    'travis_button': 'True'
+    'travis_button': 'True',
 }

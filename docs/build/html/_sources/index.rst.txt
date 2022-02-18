@@ -7,11 +7,3 @@
 
    README.rst
    Tutorial <tutorial.ipynb>
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
