@@ -9,8 +9,8 @@ low-rank data denoising and reconstruction. ``POPCORN`` takes a tabular
 data matrix and an error matrix as input and returns a denoised version
 of the original dataset as output. In most test instances, the approach
 is more accurate and efficient when used on a wide range of tests with
-varying amounts of contamination. As a result, it may simply be applied
-to astronomical research, assisting in the data cleaning process.
+varying amounts of contamination. As a consequence, it may easily be 
+used to astronomical research to help with data cleaning.
 
 Get the docs of POPCORN here! [give the link of the docs]
 
