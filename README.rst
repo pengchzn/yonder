@@ -70,3 +70,12 @@ The GPL License
 
 References
 ==========
+- Harris, C. R., Millman, K. J., van der Walt, S. J., et al.2020, Nature, 585, 357, doi: `10.1038/s41586-020-2649-2 <http://doi.org/10.1038/s41586-020-2649-2>`_
+
+- Kelly, B. C. 2007, ApJ, 665, 1489, doi: 10.1086/519947
+
+- Virtanen, P., Gommers, R., Oliphant, T. E., et al. 2020,Nature Methods, 17, 261, doi: `10.1038/s41592-019-0686-2 <http://doi.org/10.1038/s41592-019-0686-2>`_
+
+- Wentzell, P. D., & Hou, S. 2012, Journal of Chemometrics,26, 264, doi: https://doi.org/10.1002/cem.2428
+
+- Wentzell, P. D., & Lohnes, M. T. 1999, Chemometrics andIntelligent Laboratory Systems, 45, 65,doi: http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2
