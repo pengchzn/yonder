@@ -8,7 +8,7 @@ setuptools.setup(
     version='0.1',
     description='A PythOn PaCkage for nOisy data ReductioN',
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type='text/x-rst',
     url='https://github.com/pengchzn/popcorn',
     keywords=['data-denoising', 'Principal ComponentsAnalysis'],
     author='Rafael S. de Souza, Peng Chen',
