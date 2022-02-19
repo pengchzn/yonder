@@ -28,7 +28,7 @@ If you download the repository, you can also install it in the ``popcorn`` direc
 
 ::
 
-   git clone https://github.com/pengchen1019/popcorn
+   git clone https://github.com/pengchzn/popcorn
    cd popcorn
    python setup.py install
 
@@ -49,7 +49,7 @@ denoise it with the package]
 
 [Put the Code, the plot here]
 
-You can test it in this `notebook <https://github.com/pengchen1019/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself!
+You can test it in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself!
 
 If you are new to Python or don't know how to run ``POPCORN`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``POPCORN`` in the cloud!
 
