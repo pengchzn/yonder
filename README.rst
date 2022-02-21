@@ -33,7 +33,7 @@ If you download the repository, you can also install it in the ``popcorn`` direc
    python setup.py install
 
 How to use ``POPCORN``
-==================
+======================
 
 Here is an easy example for the use of ``POPCORN``
 
