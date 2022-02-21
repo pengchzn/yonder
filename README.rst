@@ -6,13 +6,11 @@ POPCORN
 
 You can get the docs of POPCORN here! [give the link of the docs]
 
-``POPCORN`` is a package that uses singular value decomposition to do
+``POPCORN`` is a package that uses singular value decomposition to perform
 low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
-of the original dataset as output. In most test instances, the approach
-is more accurate and efficient when used on a wide range of tests with
-varying amounts of contamination. As a consequence, it may easily be 
-used to astronomical research to help with data cleaning.
+of the original dataset as output. The approach enables a more accurate data analysis with a wide range of uncertainties. 
+Consequently, this package can be used as a simple toolbox to perform astronomical data cleaning.
 
 
 How to install ``POPCORN``
@@ -53,7 +51,7 @@ Here is an easy example for the use of ``POPCORN``
    # Get the denoised data
    result = U @ S @ V.T
 
-After the ``POPCORN`` procedure, you can connect any additional algorithms or models to the denoised date.
+After the ``POPCORN`` procedure, you can connect any additional algorithms or models to the denoised data.
 
 In our test example, the result of the visualization is shown in the figure below:
 
