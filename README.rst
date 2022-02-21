@@ -35,23 +35,34 @@ If you download the repository, you can also install it in the ``popcorn`` direc
 How to use ``POPCORN``
 ==================
 
+Here is an easy example for the use of ``POPCORN``
+
 ::
 
    import popcorn
+   import numpy as np
 
-   # to get the denoised data
-   data = popcorn(X,Xsd)
+   #use numpy to import the data
+   X = np.loadtxt('./Xobs.csv',delimiter=",",skiprows=1)
+   Xsd = np.loadtxt('./Xsd.csv',delimiter=",",skiprows=1)
 
-Here is an easy example for the use of ``POPCORN``
+   # put the data into the algorithm
+   # Get the value
+   U, S, V = popcorn(X, Xsd, 2)
+   
+   # Get the denoised data
+   result = U @ S @ V.T
 
-[take a simple example, easy contamination, add the noise manually and
-denoise it with the package]
+After the "POPCORN" procedure, you can connect any additional algorithms or models to the denoised date.
 
-[Put the Code, the plot here]
+In our test example, the result of the visualization is shown in the figure below:
 
-You can test it in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself!
+<LINK>
+
+You can test the test example in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself!
 
 If you are new to Python or don't know how to run ``POPCORN`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``POPCORN`` in the cloud!
+
 
 Requirements
 ============
@@ -81,3 +92,4 @@ References
 
 - Wentzell, P. D., & Lohnes, M. T. 1999, Chemometrics andIntelligent Laboratory Systems, 45, 65,doi: http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2
 
+- Reis, I., Baron, D., & Shahaf, S. 2018, The AstronomicalJournal, 157, 16, doi: `10.3847/1538-3881/aaf101<http://doi.org/10.3847/1538-3881/aaf101>`_
