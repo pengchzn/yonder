@@ -56,8 +56,8 @@ def popcorn(X, Xsd, p, MaxIter=1e5):
     return U, S, V
 
 
-X = np.loadtxt('./Xobs.csv', delimiter=",", skiprows=1)
-Xsd = np.loadtxt('./Xsd.csv', delimiter=",", skiprows=1)
+X = np.loadtxt('./datasets/Xobs.csv', delimiter=",", skiprows=1)
+Xsd = np.loadtxt('./datasets/Xsd.csv', delimiter=",", skiprows=1)
 
 U, S, V = popcorn(X, Xsd, 2)
 result = U @ S @ V.T
