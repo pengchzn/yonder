@@ -10,7 +10,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/x-rst',
     url='https://github.com/pengchzn/popcorn',
-    keywords=['data-denoising', 'Principal ComponentsAnalysis'],
+    keywords=['Astrostatistics techniques', 'Astronomy software', 'Astronomy data analysis'],
     author='Rafael S. de Souza, Peng Chen',
     author_email='drsouza@shao.ac.cn, pengchzn@gmail.com',
     packages=setuptools.find_packages(),
