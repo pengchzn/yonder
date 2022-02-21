@@ -53,7 +53,7 @@ Here is an easy example for the use of ``POPCORN``
    # Get the denoised data
    result = U @ S @ V.T
 
-After the "POPCORN" procedure, you can connect any additional algorithms or models to the denoised date.
+After the ``POPCORN`` procedure, you can connect any additional algorithms or models to the denoised date.
 
 In our test example, the result of the visualization is shown in the figure below:
 
