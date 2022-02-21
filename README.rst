@@ -7,7 +7,7 @@ POPCORN
 You can get the docs of POPCORN here! [give the link of the docs]
 
 ``POPCORN`` is a package that uses singular value decomposition to do
-low-rank data denoising and reconstruction. ``POPCORN`` takes a tabular
+low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
 of the original dataset as output. In most test instances, the approach
 is more accurate and efficient when used on a wide range of tests with
