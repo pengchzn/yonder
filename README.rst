@@ -57,7 +57,7 @@ After the ``POPCORN`` procedure, you can connect any additional algorithms or mo
 
 In our test example, the result of the visualization is shown in the figure below:
 
-<LINK>
+.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/fig_popcorn.jpg
 
 You can test the test example in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself!
 
