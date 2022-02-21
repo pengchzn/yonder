@@ -41,4 +41,4 @@ def popcorn(X, Xsd, MaxIter=1e5):
     U, S, V = sp.svds(LX, k=p)
     S = np.mat(np.diag(S))
     V = V.T
-    return U @ S @ V.T
+    return U, S, V

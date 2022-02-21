@@ -4,7 +4,7 @@
  *
  * Sphinx JavaScript utilities for the full-text search.
  *
- * :copyright: Copyright 2007-2022 by the Sphinx team, see AUTHORS.
+ * :copyright: Copyright 2007-2021 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -282,10 +282,7 @@ var Search = {
                   complete: function(jqxhr, textstatus) {
                     var data = jqxhr.responseText;
                     if (data !== '' && data !== undefined) {
-                      var summary = Search.makeSearchSummary(data, searchterms, hlterms);
-                      if (summary) {
-                        listItem.append(summary);
-                      }
+                        listItem.append(Search.makeSearchSummary(data, searchterms, hlterms));
                     }
                     Search.output.append(listItem);
                     setTimeout(function() {
@@ -328,23 +325,22 @@ var Search = {
     var results = [];
 
     for (var prefix in objects) {
-      for (var iMatch = 0; iMatch != objects[prefix].length; ++iMatch) {
-        var match = objects[prefix][iMatch];
-        var name = match[4];
-        var fullname = (prefix ? prefix + '.' : '') + name;
-        var fullnameLower = fullname.toLowerCase()
-        if (fullnameLower.indexOf(object) > -1) {
-          var score = 0;
-          var parts = fullnameLower.split('.');
-          // check for different match types: exact matches of full name or
-          // "last name" (i.e. last dotted part)
-          if (fullnameLower == object || parts[parts.length - 1] == object) {
-            score += Scorer.objNameMatch;
-          // matches in last name
+        for (var name in objects[prefix]) {
+            var fullname = (prefix ? prefix + '.' : '') + name;
+            var fullnameLower = fullname.toLowerCase()
+            if (fullnameLower.indexOf(object) > -1) {
+                var score = 0;
+                var parts = fullnameLower.split('.');
+                // check for different match types: exact matches of full name or
+                // "last name" (i.e. last dotted part)
+                if (fullnameLower == object || parts[parts.length - 1] == object) {
+                    score += Scorer.objNameMatch;
+                    // matches in last name
           } else if (parts[parts.length - 1].indexOf(object) > -1) {
             score += Scorer.objPartialMatch;
           }
-          var objname = objnames[match[1]][2];
+                var match = objects[prefix][name];
+                var objname = objnames[match[1]][2];
           var title = titles[match[0]];
           // If more than one term searched for, we require other words to be
           // found in the name/title/description
@@ -502,9 +498,6 @@ var Search = {
    */
   makeSearchSummary : function(htmlText, keywords, hlwords) {
     var text = Search.htmlToText(htmlText);
-    if (text == "") {
-      return null;
-    }
     var textLower = text.toLowerCase();
     var start = 0;
     $.each(keywords, function() {
