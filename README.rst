@@ -92,4 +92,4 @@ References
 
 - Wentzell, P. D., & Lohnes, M. T. 1999, Chemometrics andIntelligent Laboratory Systems, 45, 65,doi: http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2
 
-- Reis, I., Baron, D., & Shahaf, S. 2018, The AstronomicalJournal, 157, 16, doi: `10.3847/1538-3881/aaf101<http://doi.org/10.3847/1538-3881/aaf101>`_
+- Reis, I., Baron, D., & Shahaf, S. 2018, The AstronomicalJournal, 157, 16, doi: `10.3847/1538-3881/aaf101 <http://doi.org/10.3847/1538-3881/aaf101>`_
