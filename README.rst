@@ -59,9 +59,10 @@ In our test example, the result of the visualization is shown in the figure belo
 
 .. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/fig_popcorn.jpg
 
-You can test the test example in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself!
+The "True" data is on the top left, and we add some noise to it like the top right shows. After that, we run ``POPCORN`` on the noised data to acquire the denoised data, which is shown in the bottom right.
 
-If you are new to Python or don't know how to run ``POPCORN`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``POPCORN`` in the cloud!
+
+You can test the test example in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``POPCORN`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``POPCORN`` in the cloud!
 
 
 Requirements
