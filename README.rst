@@ -78,8 +78,8 @@ Make sure your ``Scipy`` installation is up to date before using ``popcorn``.
 
 Copyright & License
 =======
-2021 Peng Chen ([pengchzn@gmail.com](mailto:pengchzn@gmail.com))
-2021 Rafael S. de Souza ([drsouza@shao.ac.cn](mailto:drsouza@shao.ac.cn))
+2021 Peng Chen ([pengchzn@gmail.com][mailto:pengchzn@gmail.com])
+2021 Rafael S. de Souza ([drsouza@shao.ac.cn][mailto:drsouza@shao.ac.cn])
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
