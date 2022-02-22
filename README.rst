@@ -53,11 +53,17 @@ Here is an easy example for the use of ``POPCORN``
 
 After the ``POPCORN`` procedure, you can connect any additional algorithms or models to the denoised data.
 
-In our test example, the result of the visualization is shown in the figure below:
+Here is the distribution of noisy data and the distribution of denoised data in our test case:
 
-.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/fig_popcorn.jpg
+.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/Noisy_data.png
 
-The "True" data is on the top left, and we add some noise to it like the top right shows. After that, we run ``POPCORN`` on the noised data to acquire the denoised data, which is shown in the bottom right.
+.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/Denoised_data.png
+
+We also mimic how the data is used on a daily basis, run the HDBScan on both sets of data, and visualize the findings.
+
+.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/Denoised_classify.png
+
+.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/Noisy_classify.png
 
 
 You can test the test example in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``POPCORN`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``POPCORN`` in the cloud!

@@ -38,7 +38,7 @@ X['proab'] = clusterer.probabilities_
 X.loc[X['proab'] < 0.5, 'label'] = -1
 plt.xlabel('V1', fontsize=12)
 plt.ylabel('V2', fontsize=12)
-plt.title('Classification on nosy data')
+plt.title('Classification on noisy data')
 plt.scatter('V1', 'V2', c=X['label'], s=10, cmap='plasma', data=X)
 plt.xlim((-0.4, 0.4))
 plt.ylim((-0.3, 0.3))
