@@ -5,6 +5,7 @@ from numpy.linalg import inv
 
 def popcorn(X, Xsd, p, MaxIter=1e5):
     X = np.mat(X)
+    Xsd = np.mat(Xsd)
     m = X.shape[0]
     n = X.shape[1]
     if p > min(m, n):
