@@ -40,9 +40,9 @@ Here is an easy example for the use of ``POPCORN``
    import popcorn
    import numpy as np
 
-   #use numpy to import the data
-   X = np.loadtxt('./Xobs.csv',delimiter=",",skiprows=1)
-   Xsd = np.loadtxt('./Xsd.csv',delimiter=",",skiprows=1)
+   #import the data
+   X = pd.read_csv('./datasets/Xobs.csv')
+   Xsd = pd.read_csv('./datasets/Xsd.csv')
 
    # put the data into the algorithm
    # Get the value
