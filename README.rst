@@ -6,13 +6,11 @@ POPCORN
 
 You can get the docs of POPCORN here! [give the link of the docs]
 
-``POPCORN`` is a package that uses singular value decomposition to do
+``POPCORN`` is a package that uses singular value decomposition to perform
 low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
-of the original dataset as output. In most test instances, the approach
-is more accurate and efficient when used on a wide range of tests with
-varying amounts of contamination. As a consequence, it may easily be 
-used to astronomical research to help with data cleaning.
+of the original dataset as output. The approach enables a more accurate data analysis with a wide range of uncertainties. 
+Consequently, this package can be used as a simple toolbox to perform astronomical data cleaning.
 
 
 How to install ``POPCORN``
@@ -42,9 +40,9 @@ Here is an easy example for the use of ``POPCORN``
    import popcorn
    import numpy as np
 
-   #use numpy to import the data
-   X = np.loadtxt('./Xobs.csv',delimiter=",",skiprows=1)
-   Xsd = np.loadtxt('./Xsd.csv',delimiter=",",skiprows=1)
+   #import the data
+   X = pd.read_csv('./datasets/Xobs.csv')
+   Xsd = pd.read_csv('./datasets/Xsd.csv')
 
    # put the data into the algorithm
    # Get the value
@@ -53,7 +51,7 @@ Here is an easy example for the use of ``POPCORN``
    # Get the denoised data
    result = U @ S @ V.T
 
-After the ``POPCORN`` procedure, you can connect any additional algorithms or models to the denoised date.
+After the ``POPCORN`` procedure, you can connect any additional algorithms or models to the denoised data.
 
 In our test example, the result of the visualization is shown in the figure below:
 
@@ -76,10 +74,13 @@ Requirements
 Make sure your ``Scipy`` installation is up to date before using ``popcorn``.
 
 
-License
+Copyright & License
 =======
+2021 Peng Chen (pengchzn@gmail.com) & Rafael S. de Souza (drsouza@shao.ac.cn)
 
-The GPL License
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
 
 References
 ==========
