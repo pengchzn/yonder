@@ -6,7 +6,7 @@ POPCORN
 
 Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies <https://arxiv.org/abs/2202.11472>`_
 
-You can get the docs of POPCORN here! [give the link of the docs]
+`You can get the docs of POPCORN here! <https://popcorn-docs.readthedocs.io/en/latest/README.html>`_
 
 ``POPCORN`` is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
