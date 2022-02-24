@@ -4,6 +4,8 @@ POPCORN
 
 *A PythOn PaCkage for nOisy data ReductioN*
 
+Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies <https://arxiv.org/abs/2202.11472>`_
+
 You can get the docs of POPCORN here! [give the link of the docs]
 
 ``POPCORN`` is a package that uses singular value decomposition to perform
@@ -88,6 +90,8 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 References
 ==========
+
+
 - Harris, C. R., Millman, K. J., van der Walt, S. J., et al.2020, Nature, 585, 357, doi: `10.1038/s41586-020-2649-2 <http://doi.org/10.1038/s41586-020-2649-2>`_
 
 - Kelly, B. C. 2007, ApJ, 665, 1489, doi: 10.1086/519947
