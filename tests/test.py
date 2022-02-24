@@ -6,13 +6,17 @@ from popcorn.popcorn import popcorn
 
 X = pd.read_csv('./datasets/Xobs.csv')
 Xsd = pd.read_csv('./datasets/Xsd.csv')
+demo = pd.read_csv('./datasets/demo.csv')
 
 # Plot the distribution of original data
-plt.scatter('V1', 'V2', s=10, data=X)
+plt.scatter('V1', 'V2', s=15, label='Noisy data',data=X)
+plt.scatter('x01', 'x02', s=10, marker='x', label='True data', data=demo)
 plt.title('Original data')
 plt.xlim((-0.4, 0.4))
 plt.ylim((-0.3, 0.3))
+plt.legend()
 plt.show()
+
 
 # run the POPCORN
 U, S, V = popcorn(X, Xsd, 2)
@@ -24,10 +28,12 @@ for i in range(1, 21):
 result.columns = column
 
 # Plot the distribution of denoised data
-plt.scatter('V1', 'V2', s=10, data=result)
+plt.scatter('V1', 'V2', s=20,cmap='plasma', label='Denoised data', data=result)
+plt.scatter('x01', 'x02', s=5, marker='x', label='True data', data=demo)
 plt.title('Denoised data')
 plt.xlim((-0.4, 0.4))
 plt.ylim((-0.3, 0.3))
+plt.legend()
 plt.show()
 
 # Use the HDBScan to do the classification on the original data
