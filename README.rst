@@ -8,10 +8,9 @@ Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/
 
 You can get the docs of POPCORN here! [give the link of the docs]
 
-``POPCORN`` is a package that uses singular value decomposition to perform
-low-rank data denoising and reconstruction. It takes a tabular
+``POPCORN`` is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
-of the original dataset as output. The approach enables a more accurate data analysis with a wide range of uncertainties. 
+of the original dataset as output. The approach enables a more accurate data analysis in the presence of uncertainties. 
 Consequently, this package can be used as a simple toolbox to perform astronomical data cleaning.
 
 
@@ -35,7 +34,7 @@ If you download the repository, you can also install it in the ``popcorn`` direc
 How to use ``POPCORN``
 ======================
 
-Here is an easy example for the use of ``POPCORN``
+Here is a simple example for the use of ``POPCORN``
 
 ::
 
@@ -91,7 +90,6 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 References
 ==========
-
 
 - Harris, C. R., Millman, K. J., van der Walt, S. J., et al.2020, Nature, 585, 357, doi: `10.1038/s41586-020-2649-2 <http://doi.org/10.1038/s41586-020-2649-2>`_
 
