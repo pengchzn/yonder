@@ -36,6 +36,15 @@ plt.ylim((-0.3, 0.3))
 plt.legend()
 plt.show()
 
+# Show the original classification of the data
+plt.figure(figsize=(12,10), dpi=80)
+plt.figure(1)
+ax1 = plt.subplot(221)
+ax1.scatter('x01','x02',c='class', s=10,cmap='plasma' ,data=demo)
+plt.title('Original data classification')
+plt.xlim((-0.4, 0.4))
+plt.ylim((-0.3, 0.3))
+
 # Use the HDBScan to do the classification on the original data
 clusterer = hdbscan.HDBSCAN(min_cluster_size=5, gen_min_span_tree=True)
 clusterer.fit(X[['V1', 'V2']])
@@ -44,11 +53,12 @@ X['proab'] = clusterer.probabilities_
 X.loc[X['proab'] < 0.5, 'label'] = -1
 plt.xlabel('V1', fontsize=12)
 plt.ylabel('V2', fontsize=12)
+ax2 = plt.subplot(222)
+ax2.scatter('V1', 'V2', c='label', s=10, cmap='plasma', data=X)
 plt.title('Classification on noisy data')
-plt.scatter('V1', 'V2', c=X['label'], s=10, cmap='plasma', data=X)
 plt.xlim((-0.4, 0.4))
 plt.ylim((-0.3, 0.3))
-plt.show()
+
 
 # # Use the HDBScan to do the classification on the denoised data
 clusterer2 = hdbscan.HDBSCAN(min_cluster_size=5, gen_min_span_tree=True)
@@ -56,10 +66,12 @@ clusterer2.fit(result[['V1', 'V2']])
 result['label'] = clusterer2.labels_
 result['proab'] = clusterer2.probabilities_
 result.loc[result['proab'] < 0.5, 'label'] = -1
+ax3 = plt.subplot(223)
 plt.xlabel('V1', fontsize=12)
 plt.ylabel('V2', fontsize=12)
+ax3.scatter('V1', 'V2', c=result['label'], s=10, cmap='plasma', data=result)
 plt.title('Classify on denoised data')
-plt.scatter('V1', 'V2', c=result['label'], s=10, cmap='plasma', data=result)
 plt.xlim((-0.4, 0.4))
 plt.ylim((-0.3, 0.3))
+plt.tight_layout()
 plt.show()
