@@ -61,7 +61,8 @@ Here is the distribution of noisy data and the distribution of denoised data in 
 
 .. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/Denoised_data.png
 
-We also mimic how the data is used on a daily basis, run the HDBScan on both sets of data, and visualize the findings.
+In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that ``POPCORN`` may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.
+
 
 .. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/classification.png
 
