@@ -75,7 +75,7 @@ plt.ylim((-0.3, 0.3))
 
 ax3 = plt.subplot(223)
 ax3.scatter('V1', 'V2', c=result['label'], s=10, cmap='plasma', data=result)
-plt.title('Classify on denoised data')
+plt.title('Classification on denoised data')
 plt.xlabel('V1', fontsize=12)
 plt.ylabel('V2', fontsize=12)
 plt.xlim((-0.4, 0.4))

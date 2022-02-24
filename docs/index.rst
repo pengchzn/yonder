@@ -6,4 +6,3 @@
    :caption: Contents:
 
    README.rst
-   Tutorial <tutorial.ipynb>

@@ -5,7 +5,7 @@ with open('README.md', 'r') as fp:
 
 setuptools.setup(
     name='popcorn',
-    version='0.1',
+    version='1.0',
     description='A PythOn PaCkage for nOisy data ReductioN',
     long_description=long_description,
     long_description_content_type='text/x-rst',
