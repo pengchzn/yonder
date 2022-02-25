@@ -2,7 +2,7 @@ import hdbscan
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from popcorn.popcorn import popcorn
+from yonder.yonder import yonder
 
 X = pd.read_csv('./datasets/Xobs.csv')
 Xsd = pd.read_csv('./datasets/Xsd.csv')
@@ -20,7 +20,7 @@ plt.legend()
 plt.show()
 
 # run the POPCORN
-U, S, V = popcorn(X, Xsd, 2)
+U, S, V = yonder(X, Xsd, 2)
 result = U @ S @ V.T
 result = pd.DataFrame(result)
 column = []
@@ -58,7 +58,7 @@ plt.figure(figsize=(12, 10), dpi=80)
 plt.figure(1)
 ax1 = plt.subplot(221)
 ax1.scatter('x01', 'x02', c='class', s=10, cmap='plasma', data=demo)
-plt.title('Original data classification')
+plt.title('Classification on original data')
 plt.xlabel('V1', fontsize=12)
 plt.ylabel('V2', fontsize=12)
 plt.xlim((-0.4, 0.4))

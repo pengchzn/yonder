@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'POPCORN'
+project = 'yonder'
 copyright = '2022, Rafael S. de Souza & Peng Chen'
 author = 'Rafael S. de Souza & Peng Chen'
 
@@ -57,7 +57,7 @@ html_static_path = ['_static']
 
 html_theme_options = {
     'github_user': 'pengchzn',
-    'github_repo': 'popcorn',
+    'github_repo': 'yonder',
     'description': 'A python package for noisy data reduction',
     'fixed_sidebar': 'True',
     'travis_button': 'True',

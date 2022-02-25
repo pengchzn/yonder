@@ -1,4 +1,4 @@
-`POPCORN`
+`yonder`
 ==============
 
 .. toctree::

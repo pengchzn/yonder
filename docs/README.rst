@@ -1,44 +1,44 @@
 =======
-POPCORN
+yonder
 =======
 
 *A PythOn PaCkage for nOisy data ReductioN*
 
 Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies <https://arxiv.org/abs/2202.11472>`_
 
-You can get the docs of POPCORN here! [give the link of the docs]
+You can get the docs of yonder here! [give the link of the docs]
 
-``POPCORN`` is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
+``yonder`` is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
 of the original dataset as output. The approach enables a more accurate data analysis in the presence of uncertainties. 
 Consequently, this package can be used as a simple toolbox to perform astronomical data cleaning.
 
 
-How to install ``POPCORN``
+How to install ``yonder``
 ==========================
 
-The ``POPCORN`` can be installed via the PyPI and pip:
+The ``yonder`` can be installed via the PyPI and pip:
 
 ::
 
-   pip install popcorn
+   pip install yonder
 
-If you download the repository, you can also install it in the ``popcorn`` directory:
+If you download the repository, you can also install it in the ``yonder`` directory:
 
 ::
 
-   git clone https://github.com/pengchzn/popcorn
-   cd popcorn
+   git clone https://github.com/pengchzn/yonder
+   cd yonder
    python setup.py install
 
-How to use ``POPCORN``
+How to use ``yonder``
 ======================
 
-Here is a simple example for the use of ``POPCORN``
+Here is a simple example for the use of ``yonder``
 
 ::
 
-   import popcorn
+   import yonder
    import numpy as np
 
    #import the data
@@ -47,26 +47,26 @@ Here is a simple example for the use of ``POPCORN``
 
    # put the data into the algorithm
    # Get the value
-   U, S, V = popcorn(X, Xsd, 2)
+   U, S, V = yonder(X, Xsd, 2)
    
    # Get the denoised data
    result = U @ S @ V.T
 
-After the ``POPCORN`` procedure, you can connect any additional algorithms or models to the denoised data.
+After the ``yonder`` procedure, you can connect any additional algorithms or models to the denoised data.
 
 Here is the distribution of noisy data and the distribution of denoised data in our test case:
 
-.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/Noisy_data.png
+.. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/Noisy_data.png
 
-.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/Denoised_data.png
+.. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/Denoised_data.png
 
-In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that ``POPCORN`` may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.
-
-
-.. image:: https://github.com/pengchzn/popcorn/blob/main/tests/figures/classification.png
+In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that ``yonder`` may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.
 
 
-You can test the test example in this `notebook <https://github.com/pengchzn/popcorn/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``POPCORN`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``POPCORN`` in the cloud!
+.. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/classification.png
+
+
+You can test the test example in this `notebook <https://github.com/pengchzn/yonder/blob/main/tests/test_yonder.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``yonder`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``yonder`` in the cloud!
 
 
 Requirements
@@ -76,8 +76,8 @@ Requirements
 -  numpy >= 1.21.0
 -  Scipy >= 1.7.0
 
-``Popcorn`` primarily uses the most recent version of ``Scipy`` for single value decomposition. 
-Make sure your ``Scipy`` installation is up to date before using ``popcorn``.
+``yonder`` primarily uses the most recent version of ``Scipy`` for single value decomposition.
+Make sure your ``Scipy`` installation is up to date before using ``yonder``.
 
 
 Copyright & License
