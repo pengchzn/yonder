@@ -31,7 +31,6 @@ release = '1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "nbsphinx"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -58,7 +57,8 @@ html_static_path = ['_static']
 html_theme_options = {
     'github_user': 'pengchzn',
     'github_repo': 'yonder',
-    'description': 'A python package for noisy data reduction',
-    'fixed_sidebar': 'True',
-    'travis_button': 'True',
+    'description': 'A python package for data denoising and reconstruction',
+    'show_relbars':'True',
+    'show_relbar_top' :'https://arxiv.org/abs/2202.11472'
 }
+
