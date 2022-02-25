@@ -8,7 +8,7 @@ setuptools.setup(
     version='1.0',
     description='A python package for data denoising and reconstruction',
     long_description=long_description,
-    long_description_content_type='text/x-rst',
+    long_description_content_type="text/x-rst",
     url='https://github.com/pengchzn/yonder',
     keywords=['Astrostatistics techniques', 'Astronomy software', 'Astronomy data analysis'],
     author='Peng Chen',
@@ -16,7 +16,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         'Topic :: Scientific/Engineering',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
         'Programming Language :: Python :: 3',
     ],
 )

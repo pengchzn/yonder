@@ -1,4 +1,3 @@
-=======
 YONDER
 =======
 
@@ -81,7 +80,7 @@ Make sure your ``Scipy`` installation is up to date before using ``YONDER``.
 
 
 Copyright & License
-=======
+===================
 2021 Peng Chen (pengchzn@gmail.com) & Rafael S. de Souza (drsouza@shao.ac.cn)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
