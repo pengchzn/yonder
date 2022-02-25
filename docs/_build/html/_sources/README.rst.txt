@@ -1,23 +1,23 @@
 =======
-yonder
+YONDER
 =======
 
-*A PythOn PaCkage for nOisy data ReductioN*
+*A pYthON package for Data dEnoising and Reconstruction*
 
 Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies <https://arxiv.org/abs/2202.11472>`_
 
-You can get the docs of yonder here! [give the link of the docs]
+`You can get the docs of ``YONDER`` here! <https://popcorn-docs.readthedocs.io/en/latest/README.html>`_
 
-``yonder`` is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
+``YONDER`` is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
 of the original dataset as output. The approach enables a more accurate data analysis in the presence of uncertainties. 
 Consequently, this package can be used as a simple toolbox to perform astronomical data cleaning.
 
 
-How to install ``yonder``
+How to install ``YONDER``
 ==========================
 
-The ``yonder`` can be installed via the PyPI and pip:
+The ``YONDER`` can be installed via the PyPI and pip:
 
 ::
 
@@ -31,10 +31,10 @@ If you download the repository, you can also install it in the ``yonder`` direct
    cd yonder
    python setup.py install
 
-How to use ``yonder``
+How to use ``YONDER``
 ======================
 
-Here is a simple example for the use of ``yonder``
+Here is a simple example for the use of ``YONDER``
 
 ::
 
@@ -52,7 +52,7 @@ Here is a simple example for the use of ``yonder``
    # Get the denoised data
    result = U @ S @ V.T
 
-After the ``yonder`` procedure, you can connect any additional algorithms or models to the denoised data.
+After the ``YONDER`` procedure, you can connect any additional algorithms or models to the denoised data.
 
 Here is the distribution of noisy data and the distribution of denoised data in our test case:
 
@@ -60,13 +60,13 @@ Here is the distribution of noisy data and the distribution of denoised data in 
 
 .. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/Denoised_data.png
 
-In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that ``yonder`` may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.
+In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that ``YONDER`` may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.
 
 
 .. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/classification.png
 
 
-You can test the test example in this `notebook <https://github.com/pengchzn/yonder/blob/main/tests/test_yonder.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``yonder`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``yonder`` in the cloud!
+You can test the test example in this `notebook <https://github.com/pengchzn/yonder/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``YONDER`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``YONDER`` in the cloud!
 
 
 Requirements
@@ -76,8 +76,8 @@ Requirements
 -  numpy >= 1.21.0
 -  Scipy >= 1.7.0
 
-``yonder`` primarily uses the most recent version of ``Scipy`` for single value decomposition.
-Make sure your ``Scipy`` installation is up to date before using ``yonder``.
+``YONDER`` primarily uses the most recent version of ``Scipy`` for single value decomposition. 
+Make sure your ``Scipy`` installation is up to date before using ``YONDER``.
 
 
 Copyright & License
