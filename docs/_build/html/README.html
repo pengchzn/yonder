@@ -23,15 +23,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-  <div class="document">
-    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="yonder">
+<h1>YONDER<a class="headerlink" href="#yonder" title="Permalink to this headline">¶</a></h1>
+<p><em>A pYthON package for Data dEnoising and Reconstruction</em></p>
+<p>Main paper：<a class="reference external" href="https://arxiv.org/abs/2202.11472">J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies</a></p>
+<p><cite>You can get the docs of ``YONDER`</cite> here! &lt;<a class="reference external" href="https://popcorn-docs.readthedocs.io/en/latest/README.html">https://popcorn-docs.readthedocs.io/en/latest/README.html</a>&gt;`_</p>
+<p><code class="docutils literal notranslate"><span class="pre">YONDER</span></code> is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
+data matrix and an error matrix as input and returns a denoised version
+of the original dataset as output. The approach enables a more accurate data analysis in the presence of uncertainties.
+Consequently, this package can be used as a simple toolbox to perform astronomical data cleaning.</p>
+<section id="how-to-install-yonder">
+<h2>How to install <code class="docutils literal notranslate"><span class="pre">YONDER</span></code><a class="headerlink" href="#how-to-install-yonder" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> can be installed via the PyPI and pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">yonder</span>
+</pre></div>
+</div>
+<p>If you download the repository, you can also install it in the <code class="docutils literal notranslate"><span class="pre">yonder</span></code> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pengchzn</span><span class="o">/</span><span class="n">yonder</span>
+<span class="n">cd</span> <span class="n">yonder</span>
+<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-use-yonder">
+<h2>How to use <code class="docutils literal notranslate"><span class="pre">YONDER</span></code><a class="headerlink" href="#how-to-use-yonder" title="Permalink to this headline">¶</a></h2>
+<p>Here is a simple example for the use of <code class="docutils literal notranslate"><span class="pre">YONDER</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yonder</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#import the data</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./datasets/Xobs.csv&#39;</span><span class="p">)</span>
+<span class="n">Xsd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./datasets/Xsd.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># put the data into the algorithm</span>
+<span class="c1"># Get the value</span>
+<span class="n">U</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">yonder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Xsd</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Get the denoised data</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">U</span> <span class="o">@</span> <span class="n">S</span> <span class="o">@</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+<p>After the <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> procedure, you can connect any additional algorithms or models to the denoised data.</p>
+<p>Here is the distribution of noisy data and the distribution of denoised data in our test case:</p>
+<img alt="_images/Noisy_data.png" src="_images/Noisy_data.png" />
+<img alt="_images/Denoised_data.png" src="_images/Denoised_data.png" />
+<p>In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.</p>
+<img alt="_images/classification.png" src="_images/classification.png" />
+<p>You can test the test example in this <a class="reference external" href="https://github.com/pengchzn/yonder/blob/main/tests/test_popcorn.ipynb">notebook</a> locally by yourself! If you are new to Python or don’t know how to run <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> locally, you can click <a class="reference external" href="https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing">here</a> to create a new Colaboratory notebook, so you can run <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> in the cloud!</p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>python 3</p></li>
+<li><p>numpy &gt;= 1.21.0</p></li>
+<li><p>Scipy &gt;= 1.7.0</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">YONDER</span></code> primarily uses the most recent version of <code class="docutils literal notranslate"><span class="pre">Scipy</span></code> for single value decomposition.
+Make sure your <code class="docutils literal notranslate"><span class="pre">Scipy</span></code> installation is up to date before using <code class="docutils literal notranslate"><span class="pre">YONDER</span></code>.</p>
+</section>
+<section id="copyright-license">
+<h2>Copyright &amp; License<a class="headerlink" href="#copyright-license" title="Permalink to this headline">¶</a></h2>
+<p>2021 Peng Chen (<a class="reference external" href="mailto:pengchzn&#37;&#52;&#48;gmail&#46;com">pengchzn<span>&#64;</span>gmail<span>&#46;</span>com</a>) &amp; Rafael S. de Souza (<a class="reference external" href="mailto:drsouza&#37;&#52;&#48;shao&#46;ac&#46;cn">drsouza<span>&#64;</span>shao<span>&#46;</span>ac<span>&#46;</span>cn</a>)</p>
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Harris, C. R., Millman, K. J., van der Walt, S. J., et al.2020, Nature, 585, 357, doi: <a class="reference external" href="http://doi.org/10.1038/s41586-020-2649-2">10.1038/s41586-020-2649-2</a></p></li>
+<li><p>Kelly, B. C. 2007, ApJ, 665, 1489, doi: 10.1086/519947</p></li>
+<li><p>Virtanen, P., Gommers, R., Oliphant, T. E., et al. 2020,Nature Methods, 17, 261, doi: <a class="reference external" href="http://doi.org/10.1038/s41592-019-0686-2">10.1038/s41592-019-0686-2</a></p></li>
+<li><p>Wentzell, P. D., &amp; Hou, S. 2012, Journal of Chemometrics,26, 264, doi: <a class="reference external" href="https://doi.org/10.1002/cem.2428">https://doi.org/10.1002/cem.2428</a></p></li>
+<li><p>Wentzell, P. D., &amp; Lohnes, M. T. 1999, Chemometrics andIntelligent Laboratory Systems, 45, 65,doi: <a class="reference external" href="http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2">http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2</a></p></li>
+<li><p>Reis, I., Baron, D., &amp; Shahaf, S. 2018, The AstronomicalJournal, 157, 16, doi: <a class="reference external" href="http://doi.org/10.3847/1538-3881/aaf101">10.3847/1538-3881/aaf101</a></p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="index.html" title="Previous document"><cite>yonder</cite></a>
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <h1 class="logo"><a href="index.html">yonder</a></h1>
 
 
 
-<p class="blurb">A python package for noisy data reduction</p>
+<p class="blurb">A python package for data denoising and reconstruction</p>
 
 
 
@@ -86,107 +186,8 @@
 
         </div>
       </div>
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
-
-          <div class="body" role="main">
-            
-  <section id="yonder">
-<h1>YONDER<a class="headerlink" href="#yonder" title="Permalink to this headline">¶</a></h1>
-<p><em>A pYthON package for Data dEnoising and Reconstruction</em></p>
-<p>Main paper：<a class="reference external" href="https://arxiv.org/abs/2202.11472">J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies</a></p>
-<p><cite>You can get the docs of ``YONDER`</cite> here! &lt;<a class="reference external" href="https://popcorn-docs.readthedocs.io/en/latest/README.html">https://popcorn-docs.readthedocs.io/en/latest/README.html</a>&gt;`_</p>
-<p><code class="docutils literal notranslate"><span class="pre">YONDER</span></code> is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
-data matrix and an error matrix as input and returns a denoised version
-of the original dataset as output. The approach enables a more accurate data analysis in the presence of uncertainties.
-Consequently, this package can be used as a simple toolbox to perform astronomical data cleaning.</p>
-<section id="how-to-install-yonder">
-<h2>How to install <code class="docutils literal notranslate"><span class="pre">YONDER</span></code><a class="headerlink" href="#how-to-install-yonder" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> can be installed via the PyPI and pip:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">yonder</span>
-</pre></div>
-</div>
-<p>If you download the repository, you can also install it in the <code class="docutils literal notranslate"><span class="pre">yonder</span></code> directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pengchzn</span><span class="o">/</span><span class="n">yonder</span>
-<span class="n">cd</span> <span class="n">yonder</span>
-<span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
-</pre></div>
-</div>
-</section>
-<section id="how-to-use-yonder">
-<h2>How to use <code class="docutils literal notranslate"><span class="pre">YONDER</span></code><a class="headerlink" href="#how-to-use-yonder" title="Permalink to this headline">¶</a></h2>
-<p>Here is a simple example for the use of <code class="docutils literal notranslate"><span class="pre">YONDER</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yonder</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1">#import the data</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./datasets/Xobs.csv&#39;</span><span class="p">)</span>
-<span class="n">Xsd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./datasets/Xsd.csv&#39;</span><span class="p">)</span>
-
-<span class="c1"># put the data into the algorithm</span>
-<span class="c1"># Get the value</span>
-<span class="n">U</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">yonder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Xsd</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># Get the denoised data</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">U</span> <span class="o">@</span> <span class="n">S</span> <span class="o">@</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-<p>After the <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> procedure, you can connect any additional algorithms or models to the denoised data.</p>
-<p>Here is the distribution of noisy data and the distribution of denoised data in our test case:</p>
-<img alt="https://github.com/pengchzn/yonder/blob/main/tests/figures/Noisy_data.png" src="https://github.com/pengchzn/yonder/blob/main/tests/figures/Noisy_data.png" />
-<img alt="https://github.com/pengchzn/yonder/blob/main/tests/figures/Denoised_data.png" src="https://github.com/pengchzn/yonder/blob/main/tests/figures/Denoised_data.png" />
-<p>In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.</p>
-<img alt="https://github.com/pengchzn/yonder/blob/main/tests/figures/classification.png" src="https://github.com/pengchzn/yonder/blob/main/tests/figures/classification.png" />
-<p>You can test the test example in this <a class="reference external" href="https://github.com/pengchzn/yonder/blob/main/tests/test_popcorn.ipynb">notebook</a> locally by yourself! If you are new to Python or don’t know how to run <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> locally, you can click <a class="reference external" href="https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing">here</a> to create a new Colaboratory notebook, so you can run <code class="docutils literal notranslate"><span class="pre">YONDER</span></code> in the cloud!</p>
-</section>
-<section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>python 3</p></li>
-<li><p>numpy &gt;= 1.21.0</p></li>
-<li><p>Scipy &gt;= 1.7.0</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">YONDER</span></code> primarily uses the most recent version of <code class="docutils literal notranslate"><span class="pre">Scipy</span></code> for single value decomposition.
-Make sure your <code class="docutils literal notranslate"><span class="pre">Scipy</span></code> installation is up to date before using <code class="docutils literal notranslate"><span class="pre">YONDER</span></code>.</p>
-</section>
-<section id="copyright-license">
-<h2>Copyright &amp; License<a class="headerlink" href="#copyright-license" title="Permalink to this headline">¶</a></h2>
-<p>2021 Peng Chen (<a class="reference external" href="mailto:pengchzn&#37;&#52;&#48;gmail&#46;com">pengchzn<span>&#64;</span>gmail<span>&#46;</span>com</a>) &amp; Rafael S. de Souza (<a class="reference external" href="mailto:drsouza&#37;&#52;&#48;shao&#46;ac&#46;cn">drsouza<span>&#64;</span>shao<span>&#46;</span>ac<span>&#46;</span>cn</a>)</p>
-<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
-<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.</p>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Harris, C. R., Millman, K. J., van der Walt, S. J., et al.2020, Nature, 585, 357, doi: <a class="reference external" href="http://doi.org/10.1038/s41586-020-2649-2">10.1038/s41586-020-2649-2</a></p></li>
-<li><p>Kelly, B. C. 2007, ApJ, 665, 1489, doi: 10.1086/519947</p></li>
-<li><p>Virtanen, P., Gommers, R., Oliphant, T. E., et al. 2020,Nature Methods, 17, 261, doi: <a class="reference external" href="http://doi.org/10.1038/s41592-019-0686-2">10.1038/s41592-019-0686-2</a></p></li>
-<li><p>Wentzell, P. D., &amp; Hou, S. 2012, Journal of Chemometrics,26, 264, doi: <a class="reference external" href="https://doi.org/10.1002/cem.2428">https://doi.org/10.1002/cem.2428</a></p></li>
-<li><p>Wentzell, P. D., &amp; Lohnes, M. T. 1999, Chemometrics andIntelligent Laboratory Systems, 45, 65,doi: <a class="reference external" href="http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2">http://doi.org/https://doi.org/10.1016/S0169-7439(98)00090-2</a></p></li>
-<li><p>Reis, I., Baron, D., &amp; Shahaf, S. 2018, The AstronomicalJournal, 157, 16, doi: <a class="reference external" href="http://doi.org/10.3847/1538-3881/aaf101">10.3847/1538-3881/aaf101</a></p></li>
-</ul>
-</section>
-</section>
-
-
-          </div>
-              <div class="related bottom">
-                &nbsp;
-  <nav id="rellinks">
-    <ul>
-        <li>
-          &larr;
-          <a href="index.html" title="Previous document"><cite>yonder</cite></a>
-        </li>
-    </ul>
-  </nav>
-              </div>
-          
-        </div>
-      </div>
-    <div class="clearer"></div>
-  </div>
+      <div class="clearer"></div>
+    </div>
     <div class="footer">
       &copy;2022, Rafael S. de Souza & Peng Chen.
       

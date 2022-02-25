@@ -56,14 +56,14 @@ After the ``YONDER`` procedure, you can connect any additional algorithms or mod
 
 Here is the distribution of noisy data and the distribution of denoised data in our test case:
 
-.. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/Noisy_data.png
+.. image:: /figures/Noisy_data.png
 
-.. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/Denoised_data.png
+.. image:: /figures/Denoised_data.png
 
 In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that ``YONDER`` may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.
 
 
-.. image:: https://github.com/pengchzn/yonder/blob/main/tests/figures/classification.png
+.. image:: /figures/classification.png
 
 
 You can test the test example in this `notebook <https://github.com/pengchzn/yonder/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``YONDER`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``YONDER`` in the cloud!
