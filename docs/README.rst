@@ -6,7 +6,6 @@ YONDER
 
 Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies <https://arxiv.org/abs/2202.11472>`_
 
-`You can get the docs of ``YONDER`` here! <https://popcorn-docs.readthedocs.io/en/latest/README.html>`_
 
 ``YONDER`` is a package that uses singular value decomposition to perform low-rank data denoising and reconstruction. It takes a tabular
 data matrix and an error matrix as input and returns a denoised version
@@ -63,10 +62,10 @@ Here is the distribution of noisy data and the distribution of denoised data in 
 In addition, we simulate how the data is used on a daily basis, run the HDBScan on both sets of data, and show the findings. It is obvious from the figures below that ``YONDER`` may effectively reduce noise. When it comes to classification, denoised data can be quite beneficial, resulting in a superior outcome.
 
 
-.. image:: /figures/classification.png
+.. image:: /figures/Classification.png
 
 
-You can test the test example in this `notebook <https://github.com/pengchzn/yonder/blob/main/tests/test_popcorn.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``YONDER`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``YONDER`` in the cloud!
+You can test the test example in this `notebook <https://github.com/pengchzn/yonder/blob/main/tests/test_yonder.ipynb>`_ locally by yourself! If you are new to Python or don't know how to run ``YONDER`` locally, you can click `here <https://colab.research.google.com/drive/1nT4M90_VE-lX0L9d_XPg70QOTkuVbAZO?usp=sharing>`_ to create a new Colaboratory notebook, so you can run ``YONDER`` in the cloud!
 
 
 Requirements
