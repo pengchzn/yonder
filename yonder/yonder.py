@@ -1,4 +1,5 @@
 import numpy as np
+import sys
 import scipy.sparse.linalg as sp
 from numpy.linalg import inv
 
@@ -9,13 +10,13 @@ def yonder(X, Xsd, p, MaxIter=1e5):
     m = X.shape[0] # Numbers of lines in X
     n = X.shape[1] # Numbers of columns in X
     if p > min(m, n):
-        exit("yonder:err1 - Invalid rank for yonder decomposition")
+        sys.exit("yonder:err1 - Invalid rank for yonder decomposition")
     ml = Xsd.shape[0] # Numbers of lines in Xsd
     nl = Xsd.shape[1] # Numbers of columns in Xsd
     if m != ml or n != nl:
-        exit("yonder:err2 - Dimensions of data and standard deviations do not match")
+        sys.exit("yonder:err2 - Dimensions of data and standard deviations do not match")
     if bool(np.any(Xsd == 0)):
-        exit("yonder:err3 - Zero value(s) for standard deviations")
+        sys.exit("yonder:err3 - Zero value(s) for standard deviations")
 
 # Initialization
     ConvLim = 1e-10 # Convergence Limit
@@ -44,7 +45,7 @@ def yonder(X, Xsd, p, MaxIter=1e5):
                 ErrFlag = 0
             if Count > MaxIter: # Maximum Iterations
                 ErrFlag = 1
-                exit("yonder:err4 - Maximum iterations exceeded")
+                sys.exit("yonder:err4 - Maximum iterations exceeded")
         if ErrFlag < 0:
             Sold = Sobj # Save most recent objective function
             U, S, V = sp.svds(MLX, k=p)

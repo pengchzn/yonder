@@ -37,7 +37,7 @@ Here is a simple example for the use of ``YONDER``
 
 ::
 
-   import yonder
+   from yonder import yonder
    import numpy as np
 
    #import the data
@@ -46,7 +46,7 @@ Here is a simple example for the use of ``YONDER``
 
    # put the data into the algorithm
    # Get the value
-   U, S, V = yonder(X, Xsd, 2)
+   U, S, V = yonder.yonder(X, Xsd, 2)
    
    # Get the denoised data
    result = U @ S @ V.T
@@ -72,8 +72,8 @@ Requirements
 ============
 
 -  python 3
--  numpy >= 1.21.0
--  Scipy >= 1.7.0
+-  numpy >= 1.21.5
+-  Scipy >= 1.7.3
 
 ``YONDER`` primarily uses the most recent version of ``Scipy`` for single value decomposition. 
 Make sure your ``Scipy`` installation is up to date before using ``YONDER``.

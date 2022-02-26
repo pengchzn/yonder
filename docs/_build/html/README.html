@@ -56,7 +56,7 @@ Consequently, this package can be used as a simple toolbox to perform astronomic
 <section id="how-to-use-yonder">
 <h2>How to use <code class="docutils literal notranslate"><span class="pre">YONDER</span></code><a class="headerlink" href="#how-to-use-yonder" title="Permalink to this headline">¶</a></h2>
 <p>Here is a simple example for the use of <code class="docutils literal notranslate"><span class="pre">YONDER</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yonder</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yonder</span> <span class="kn">import</span> <span class="n">yonder</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1">#import the data</span>
@@ -65,7 +65,7 @@ Consequently, this package can be used as a simple toolbox to perform astronomic
 
 <span class="c1"># put the data into the algorithm</span>
 <span class="c1"># Get the value</span>
-<span class="n">U</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">yonder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Xsd</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">U</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">yonder</span><span class="o">.</span><span class="n">yonder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Xsd</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Get the denoised data</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">U</span> <span class="o">@</span> <span class="n">S</span> <span class="o">@</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span>
@@ -83,8 +83,8 @@ Consequently, this package can be used as a simple toolbox to perform astronomic
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>python 3</p></li>
-<li><p>numpy &gt;= 1.21.0</p></li>
-<li><p>Scipy &gt;= 1.7.0</p></li>
+<li><p>numpy &gt;= 1.21.5</p></li>
+<li><p>Scipy &gt;= 1.7.3</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">YONDER</span></code> primarily uses the most recent version of <code class="docutils literal notranslate"><span class="pre">Scipy</span></code> for single value decomposition.
 Make sure your <code class="docutils literal notranslate"><span class="pre">Scipy</span></code> installation is up to date before using <code class="docutils literal notranslate"><span class="pre">YONDER</span></code>.</p>

@@ -2,7 +2,7 @@ import hdbscan
 import pandas as pd
 from matplotlib import pyplot as plt
 
-import yonder
+from yonder import yonder
 
 X = pd.read_csv('./datasets/Xobs.csv')
 Xsd = pd.read_csv('./datasets/Xsd.csv')
@@ -20,7 +20,7 @@ plt.legend()
 plt.show()
 
 # run the POPCORN
-U, S, V = yonder(X, Xsd, 2)
+U, S, V = yonder.yonder(X, Xsd, 2)
 result = U @ S @ V.T
 result = pd.DataFrame(result)
 column = []
