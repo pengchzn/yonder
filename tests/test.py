@@ -2,7 +2,7 @@ import hdbscan
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from yonder.yonder import yonder
+import yonder
 
 X = pd.read_csv('./datasets/Xobs.csv')
 Xsd = pd.read_csv('./datasets/Xsd.csv')
