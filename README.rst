@@ -1,6 +1,9 @@
 YONDER
 =======
 
+.. image:: https://zenodo.org/badge/450011791.svg
+   :target: https://zenodo.org/badge/latestdoi/450011791
+
 *A pYthON package for Data dEnoising and Reconstruction*
 
 Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies <https://arxiv.org/abs/2202.11472>`_
