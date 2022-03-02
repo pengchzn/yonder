@@ -1,8 +1,12 @@
 YONDER
 =======
 
+.. image:: https://img.shields.io/pypi/v/yonder?color=brightgreen
+   :target: https://pypi.org/project/yonder/
+   
 .. image:: https://zenodo.org/badge/450011791.svg
    :target: https://zenodo.org/badge/latestdoi/450011791
+   
 
 *A pYthON package for Data dEnoising and Reconstruction*
 
