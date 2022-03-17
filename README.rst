@@ -9,7 +9,7 @@ YONDER
 .. image:: https://img.shields.io/badge/build-passing-successw
    
 
-*A pYthON package for Data dEnoising and Reconstruction*
+`yonder: A python package for data denoising and reconstruction <https://arxiv.org/abs/2203.08071>`_
 
 Main paper：`J-PLUS: A catalogue of globular cluster candidates around the M81/M82/NGC3077 triplet of galaxies <https://arxiv.org/abs/2202.11472>`_
 
